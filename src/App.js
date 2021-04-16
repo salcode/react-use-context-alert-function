@@ -1,4 +1,5 @@
 import './App.css';
+import Body from './components/Body/';
 
 function sayHello() {
   alert('hello');
@@ -7,7 +8,9 @@ function sayHello() {
 function App() {
   return (
     <div className="App">
-      <button onClick={sayHello}>Say hi</button>
+      <Body>
+        <button onClick={sayHello}>Say hi</button>
+      </Body>
     </div>
   );
 }
