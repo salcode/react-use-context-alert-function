@@ -5,23 +5,9 @@ function sayHello() {
 }
 
 export default function Body({children}) {
-
-  const childrenWithSendAlert = React.Children.map(
-    children,
-    (child) => {
-      if (! React.isValidElement(child)) {
-        return child;
-      }
-      return React.cloneElement(
-        child,
-        { sendAlert: sayHello }
-      );
-    }
-  );
-
   return (
-    <div className="my-body">
-      {childrenWithSendAlert}
-    </div>
+      <div className="my-body">
+        {children}
+      </div>
   );
 }
